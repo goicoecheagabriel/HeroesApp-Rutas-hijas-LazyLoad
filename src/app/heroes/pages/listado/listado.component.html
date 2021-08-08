@@ -1,22 +1,23 @@
 
-<ul>
-    <li *ngFor="let heroe of heroes" >
-        
-        <mat-card class="example-card m-1">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>{{ heroe.superhero }}</mat-card-title>
-              <mat-card-subtitle>{{ heroe.alter_ego }}</mat-card-subtitle>
-            </mat-card-header>
-             <mat-card-content>
-              <p>
-                {{ heroe.characters }}
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>me gusta</button>
-              <button mat-button>compartir</button>
-            </mat-card-actions>
-          </mat-card>
-    </li>
-</ul>
+<h1>Listado de Héroes</h1>
+<mat-divider></mat-divider>
+
+<br>
+
+<div 
+  fxLayout="row wrap"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="20px"
+>
+  <div 
+    fxFlex="20"
+    fxFlex.lg="20"
+    fxFlex.sm="30"
+    *ngFor="let heroe of heroes"
+  >
+    <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta>
+
+  </div>
+  
+</div>

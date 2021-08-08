@@ -10,6 +10,9 @@ const routes: Routes = [
     path: 'heroes', loadChildren: () => import('./heroes/heroes.module').then( m => m.HeroesModule )
   },
   {
+    path: 'store', loadChildren: () => import('./store/store.module').then( m => m.StoreModule )
+  },
+  {
     path:'404', component: ErrorPageComponent
   },
   {
