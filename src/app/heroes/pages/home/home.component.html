@@ -62,8 +62,11 @@
 
         <span class="spacer">Dashboard</span>
 
+        <span>{{ auth.usuario }}</span>
+
         <button 
             mat-button
+            (click)="logout()"
         >
             Logout
         </button>
